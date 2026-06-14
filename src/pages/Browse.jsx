@@ -1,9 +1,8 @@
 import React, { useState, useEffect, useCallback } from 'react'
 import { useParams } from 'react-router-dom'
 import { tmdb } from '../services/tmdb'
-import { useInfiniteScroll } from '../hooks'
-import MovieGrid from '../components/media/MovieGrid'
-import { useDebounce, useInfiniteScroll } from '../hooks'
+import { useInfiniteScroll,useDebounce } from '../hooks'
+import MovieGrid from '../components/media/MovieGrid' 
 const CATEGORIES = {
   popular: { title: 'Popular Movies', emoji: '🔥', fn: (p) => tmdb.popular(p) },
   'top-rated': { title: 'Top Rated', emoji: '⭐', fn: (p) => tmdb.topRated(p) },
@@ -25,7 +24,7 @@ export default function Browse({search}) {
   const fetchMovies = useCallback(async (newPage = 1) => {
     setLoading(true)
     try {
-      const data = await cat.fn(newPage)
+      const data = isSearching ? await tmdb.search(debouncedSearch, newPage) : await cat.fn(newPage)
       setTotalPages(data.total_pages || 1)
       const results = data.results || []
       setMovies(prev => newPage === 1 ? results : [...prev, ...results.filter(m => !prev.find(p => p.id === m.id))])
