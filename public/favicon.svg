@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" rx="6" fill="#000"/>
+  <text x="3" y="24" font-family="Georgia,serif" font-size="24" font-weight="900" fill="#E50914">C</text>
+  <rect x="20" y="7" width="3" height="18" rx="1.5" fill="#E50914"/>
+  <rect x="26" y="7" width="3" height="18" rx="1.5" fill="#E50914"/>
+</svg>
