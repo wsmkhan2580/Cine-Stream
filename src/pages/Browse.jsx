@@ -11,7 +11,7 @@ const CATEGORIES = {
   'now-playing': { title: 'Now Playing', emoji: '▶️', fn: (p) => tmdb.nowPlaying(p) },
 }
 
-export default function Browse() {
+export default function Browse({search}) {
   const { category = 'popular' } = useParams()
   const cat = CATEGORIES[category] || CATEGORIES.popular
 
