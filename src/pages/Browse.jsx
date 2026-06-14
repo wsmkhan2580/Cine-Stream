@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom'
 import { tmdb } from '../services/tmdb'
 import { useInfiniteScroll } from '../hooks'
 import MovieGrid from '../components/media/MovieGrid'
-
+import { useDebounce, useInfiniteScroll } from '../hooks'
 const CATEGORIES = {
   popular: { title: 'Popular Movies', emoji: '🔥', fn: (p) => tmdb.popular(p) },
   'top-rated': { title: 'Top Rated', emoji: '⭐', fn: (p) => tmdb.topRated(p) },
