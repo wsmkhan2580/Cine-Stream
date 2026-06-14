@@ -4,8 +4,8 @@ import { tmdb } from '../services/tmdb'
 import { useInfiniteScroll,useDebounce } from '../hooks'
 import MovieGrid from '../components/media/MovieGrid' 
 const CATEGORIES = {
-  popular: { title: 'Popular Movies', emoji: '🔥', fn: (p) => tmdb.popular(p) },
-  'top-rated': { title: 'Top Rated', emoji: '⭐', fn: (p) => tmdb.topRated(p) },
+  popular: { title: 'Popular Movies', emoji: '', fn: (p) => tmdb.popular(p) },
+  'top-rated': { title: 'Top Rated', emoji: '', fn: (p) => tmdb.topRated(p) },
   upcoming: { title: 'Upcoming', emoji: '🎬', fn: (p) => tmdb.upcoming(p) },
   'now-playing': { title: 'Now Playing', emoji: '▶️', fn: (p) => tmdb.nowPlaying(p) },
 }
@@ -46,7 +46,7 @@ export default function Browse({search}) {
   const sentinelRef = useInfiniteScroll(loadMore, canLoadMore)
 
   return (
-    <main className="min-h-screen bg-n-dark pt-24 pb-16">
+     <main className={`min-h-screen bg-n-dark pb-16 ${isSearching ? 'pt-36 sm:pt-24' : 'pt-24'}`}>
       <div className="max-w-screen-2xl mx-auto px-4 sm:px-8">
         <div className="flex items-center gap-3 mb-8">
           <div className="w-1 h-8 bg-n-red rounded-full" />
