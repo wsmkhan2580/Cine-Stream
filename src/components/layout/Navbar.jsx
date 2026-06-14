@@ -251,12 +251,12 @@ export default function Navbar({ search, setSearch }) {
           <div className="sm:hidden border-t border-white/[0.06] bg-[#0a0a0a]/98 backdrop-blur-2xl animate-slide-down">
             <div className="px-4 py-3 flex flex-col gap-0.5">
               {[
-                { to: '/', label: 'Home', emoji: '🏠' },
-                { to: '/browse/popular', label: 'Popular', emoji: '🔥' },
-                { to: '/browse/top-rated', label: 'Top Rated', emoji: '⭐' },
-                { to: '/browse/upcoming', label: 'Upcoming', emoji: '🎬' },
+                { to: '/', label: 'Home'},
+                { to: '/browse/popular', label: 'Popular' },
+                { to: '/browse/top-rated', label: 'Top Rated' },
+                { to: '/browse/upcoming', label: 'Upcoming',},
                 { to: '/favorites', label: count > 0 ? `My List  (${count})` : 'My List', emoji: '❤️' },
-                { to: '/mood', label: 'Mood Match', emoji: '✨' },
+                { to: '/mood', label: 'Mood Match'},
               ].map(({ to, label, emoji }) => (
                 <MobileLink key={to} to={to} label={label} emoji={emoji} onClick={() => setMenuOpen(false)} />
               ))}
