@@ -15,15 +15,15 @@ export default function MoodPage() {
         <MoodMatcher />
         <div className="mt-8 grid grid-cols-3 gap-4 text-center">
   <div className="bg-zinc-900 border border-zinc-800 rounded-xl p-4">
-    <p className="text-2xl font-black text-white">AI</p>
+    <p className="text-2xl font-black text-[#E50914]">AI</p>
     <p className="text-zinc-500 text-xs mt-1">Powered matching</p>
   </div>
   <div className="bg-zinc-900 border border-zinc-800 rounded-xl p-4">
-    <p className="text-2xl font-black text-white">10+</p>
+    <p className="text-2xl font-black text-[#E50914]">10+</p>
     <p className="text-zinc-500 text-xs mt-1">Mood options</p>
   </div>
   <div className="bg-zinc-900 border border-zinc-800 rounded-xl p-4">
-    <p className="text-2xl font-black text-white">1M+</p>
+    <p className="text-2xl font-black text-[#E50914]">1M+</p>
     <p className="text-zinc-500 text-xs mt-1">Movies in database</p>
   </div>
 </div>
