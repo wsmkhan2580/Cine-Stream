@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { matchMood } from '../../services/aiMatcher'
 import { tmdb } from '../../services/tmdb'
 
-const CHIPS = ['Happy 😊', 'Sad 😢', 'Excited ⚡', 'Romantic 💕', 'Scared 😱', 'Inspired 🌟', 'Adventurous 🗺️', 'Nostalgic 🌅', 'Dark 🌑', 'Funny 😂']
+const CHIPS = ['Happy ', 'Sad ', 'Excited ', 'Romantic ', 'Scared ', 'Inspired ', 'Adventurous ', 'Nostalgic ', 'Dark ', 'Funny ']
 
 export default function MoodMatcher() {
   const [mood, setMood] = useState('')
