@@ -30,13 +30,13 @@ export default function Browse({search}) {
       setMovies(prev => newPage === 1 ? results : [...prev, ...results.filter(m => !prev.find(p => p.id === m.id))])
     } catch {}
     finally { setLoading(false) }
-  }, [cat])
+  }, [cat,isSearching,debouncedSearch])
 
   useEffect(() => {
     setMovies([]); setPage(1)
     fetchMovies(1)
     window.scrollTo({ top: 0 })
-  }, [category])
+  }, [category,fetchMovies])
 
   const loadMore = useCallback(() => {
     if (!canLoadMore) return
