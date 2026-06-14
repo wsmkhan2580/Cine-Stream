@@ -254,8 +254,8 @@ export default function Navbar({ search, setSearch }) {
                 { to: '/', label: 'Home'},
                 { to: '/browse/popular', label: 'Popular' },
                 { to: '/browse/top-rated', label: 'Top Rated' },
-                { to: '/browse/upcoming', label: 'Upcoming',},
-                { to: '/favorites', label: count > 0 ? `My List  (${count})` : 'My List', emoji: '❤️' },
+                { to: '/browse/upcoming', label: 'Upcoming'},
+                { to: '/favorites', label: count > 0 ? `My List  (${count})` : 'My List' },
                 { to: '/mood', label: 'Mood Match'},
               ].map(({ to, label, emoji }) => (
                 <MobileLink key={to} to={to} label={label} emoji={emoji} onClick={() => setMenuOpen(false)} />
