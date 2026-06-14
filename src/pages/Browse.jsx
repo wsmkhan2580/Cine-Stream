@@ -5,9 +5,9 @@ import { useInfiniteScroll,useDebounce } from '../hooks'
 import MovieGrid from '../components/media/MovieGrid' 
 const CATEGORIES = {
   popular: { title: 'Popular Movies', fn: (p) => tmdb.popular(p) },
-  'top-rated': { title: 'Top Rated', emoji: '', fn: (p) => tmdb.topRated(p) },
-  upcoming: { title: 'Upcoming', emoji: '🎬', fn: (p) => tmdb.upcoming(p) },
-  'now-playing': { title: 'Now Playing', emoji: '▶️', fn: (p) => tmdb.nowPlaying(p) },
+  'top-rated': { title: 'Top Rated', fn: (p) => tmdb.topRated(p) },
+  upcoming: { title: 'Upcoming', fn: (p) => tmdb.upcoming(p) },
+  'now-playing': { title: 'Now Playing',fn: (p) => tmdb.nowPlaying(p) },
 }
 
 export default function Browse({search}) {
