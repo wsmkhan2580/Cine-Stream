@@ -25,7 +25,7 @@ export default function AppRouter() {
       <Routes>
         <Route path="/" element={<Home search={search} />} />
         <Route path="/movie/:id" element={<MovieDetail />} />
-        <Route path="/browse/:category" element={<Browse />} />
+        <Route path="/browse/:category" element={<Browse search={search} />} />
         <Route path="/genre/:id" element={<GenrePage />} />
         <Route path="/mood" element={<MoodPage />} />
         <Route path="/favorites" element={<Protected><Favorites /></Protected>} />
