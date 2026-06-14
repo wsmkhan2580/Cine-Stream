@@ -14,7 +14,8 @@ const CATEGORIES = {
 export default function Browse({search}) {
   const { category = 'popular' } = useParams()
   const cat = CATEGORIES[category] || CATEGORIES.popular
-
+  const debouncedSearch = useDebounce(search, 500)
+  const isSearching = debouncedSearch.trim().length > 0
   const [movies, setMovies] = useState([])
   const [page, setPage] = useState(1)
   const [totalPages, setTotalPages] = useState(1)
