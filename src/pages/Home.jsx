@@ -55,7 +55,7 @@ export default function Home({ search }) {
     <main className="min-h-screen bg-n-dark">
       {!isSearching && <HeroBanner movie={hero} />}
 
-      <div className="max-w-screen-2xl mx-auto px-4 sm:px-8 py-8 space-y-8">
+      <div className={`max-w-screen-2xl mx-auto px-4 sm:px-8 py-8 space-y-8 ${isSearching ? 'pt-24' : ''}`}>
         {!isSearching && <MoodMatcher />}
 
         {/* Section header */}
