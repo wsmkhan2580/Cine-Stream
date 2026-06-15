@@ -1,46 +1,39 @@
-# 🎬 Cine-Stream v2
-
-Netflix-inspired movie SPA — React + Vite + Tailwind CSS + TMDB API.
-
-## Quick Start
-
-```bash
-cp .env.example .env   # add your TMDB key
+Cine-Stream
+A Netflix-inspired movie discovery app built with React and Vite. Search for films, explore by mood using AI, and save your favorites — all in a fast, clean single-page experience.
+What it does
+You land on a homepage with a featured film banner that changes every time. From there you can search for any movie, browse by category, or let the AI pick something based on how you're feeling.
+The Mood Matcher is the most interesting part — you type something like "I want something dark and psychological" and it uses Claude (Anthropic's AI) to figure out a matching film, then pulls that film's data from TMDB. It's not a keyword search, it actually understands what you mean.
+If you create an account (mock login, no backend), you can save films to your list and they'll still be there when you come back.
+Pages
+Home — Hero banner, Mood Matcher, popular movies with infinite scroll
+Popular / Top Rated / Upcoming — Browse by category, search works here too
+Mood Match — Dedicated page for AI-powered film matching
+Favorites — Your saved films, protected route (login required)
+Movie Detail — Full info for any film
+Tech used
+React 18 + Vite
+Tailwind CSS
+React Router v6
+TMDB API — movie data, posters, search
+Anthropic Claude API — mood to movie matching
+localStorage — favorites and login persistence
+Features worth mentioning
+Search works across all pages, not just home
+Debounced search — doesn't fire on every keystroke
+Infinite scroll on all movie grids
+Lazy loading for images
+Fully responsive, works on mobile
+Protected route for favorites using React Context
+Mood chips for quick selection (Happy, Dark, Romantic, etc.)
+Setup
+Clone the repo and install dependencies:
+git clone https://github.com/wsmkhan2580/Cine-Stream
+cd Cine-Stream
 npm install
+
+Run locally:
 npm run dev
-```
-
-## Demo Login
-| Email | Password |
-|---|---|
-| demo@cinestream.com | demo1234 |
-
-## Routes
-| Path | Page |
-|---|---|
-| `/` | Home + Hero + Popular |
-| `/movie/:id` | Full Movie Detail Page |
-| `/browse/popular` | Popular Movies |
-| `/browse/top-rated` | Top Rated |
-| `/browse/upcoming` | Upcoming |
-| `/genre/:id` | Genre filtered movies |
-| `/mood` | AI Mood Matcher |
-| `/favorites` | My List (protected) |
-| `/login` | Sign In |
-
-## Features
-- Full page movie detail (`/movie/:id`) with cast, tabs, trailer link
-- Netflix-style hover cards with scale animation
-- Debounced search (500ms)
-- Infinite scroll (IntersectionObserver)
-- Favorites persisted to localStorage
-- AI Mood Matcher (Claude API + fallback)
-- Protected `/favorites` route
-- Mobile-first responsive design
-- React.memo + useCallback optimization
-
-## Env Variables
-```
-VITE_TMDB_KEY=    # required — themoviedb.org/settings/api
-VITE_AI_KEY=      # optional — console.anthropic.com
-```
+Live
+Deployed on Vercel — cine-stream-le7r-seven.vercel.app
+Notes
+This was built as a learning project across three phases — starting from a basic movie grid, adding search and infinite scroll, then finishing with AI integration and a proper auth flow. The goal was to understand how a real SPA is structured, not just make something that looks good.
