@@ -46,15 +46,6 @@ If you create an account (mock login, no backend), you can save films to your li
 - Mood chips for quick selection (Happy, Dark, Romantic, etc.)
 
 ---
-
-## Setup
-
-```bash
-git clone https://github.com/wsmkhan2580/Cine-Stream
-cd Cine-Stream
-npm install
-npm run dev
-
 ## Live
 
 Deployed on Vercel — [cine-stream-le7r-seven.vercel.app](https://cine-stream-le7r-seven.vercel.app)
@@ -64,3 +55,13 @@ Deployed on Vercel — [cine-stream-le7r-seven.vercel.app](https://cine-stream-l
 ## Notes
 
 Built as a learning project across three phases — basic movie grid, then search and infinite scroll, then AI integration and auth flow. Goal was to understand how a real SPA is structured, not just make something that looks good.
+
+
+## Setup
+
+```bash
+git clone https://github.com/wsmkhan2580/Cine-Stream
+cd Cine-Stream
+npm install
+npm run dev
+
