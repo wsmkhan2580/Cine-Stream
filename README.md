@@ -55,7 +55,12 @@ cd Cine-Stream
 npm install
 npm run dev
 
-Live
-Deployed on Vercel — cine-stream-le7r-seven.vercel.app
-Notes
+## Live
+
+Deployed on Vercel — [cine-stream-le7r-seven.vercel.app](https://cine-stream-le7r-seven.vercel.app)
+
+---
+
+## Notes
+
 Built as a learning project across three phases — basic movie grid, then search and infinite scroll, then AI integration and auth flow. Goal was to understand how a real SPA is structured, not just make something that looks good.
